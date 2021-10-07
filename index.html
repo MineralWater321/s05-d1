@@ -76,9 +76,55 @@
 	<p><em>Input elements that make up a form</em></p>
 
 	<form>
+		<!-- Full name field -->
 		<label for="fullName">Full Name:</label><br>
-		<input type="text" name="full_name" id="fullName" required="" autocomplete><br>
-		<button type="submit">Submit</button>
+		<input type="text" name="full_name" id="fullName" required="" autocomplete=""><br>
+
+		<!-- Birthdate field -->
+		<label for="birthDate">Birth Date:</label><br>
+		<!-- min/max attribute date format - yyyy-mm-dd -->
+		<input type="date" name="birth_date" id="birthDate" min="1990-01-01" required=""><br>
+
+		<!-- Age field -->
+		<label for="age">Age:</label><br>
+		<input type="number" name="age" id="age" required="" min="5"><br>
+
+		<!-- Gender field -->
+		<label for="gender">Gender:</label><br>
+		<select name="gender" id="gender">
+			<option value="Male">Male</option>
+			<option value="Female">Female</option>
+		</select><br>
+
+		<!-- Notes field -->
+		<label for="notes">Notes:</label><br>
+		<textarea name="notes" id="notes" rows="5" maxlength="20"></textarea><br>
+
+		<!-- New user field -->
+		<label>New User:</label><br>
+		<!-- radio option for yes -->
+		<!-- name attribute is different to group similar radio buttons -->
+		<input type="radio" name="new_user" id="user-type1" value="yes">
+		<label for="user-type1">Yes</label><br>
+
+		<!-- radio option for no -->
+		<input type="radio" name="new_user" id="user-type2" value="no">
+		<label for="user-type2">No</label><br><br>
+
+		<!-- checkbox -->
+		<!-- Role field -->
+		<label>Role:</label><br>
+		<input type="checkbox" name="role" id="role1" value="developer">
+		<label for="role1">Developer</label><br>
+
+		<input type="checkbox" name="role" id="role2" value="student">
+		<label for="role2">Student</label><br>
+
+		<input type="checkbox" name="role" id="role3" value="manager">
+		<label for="role3">Manager</label><br><br>
+
+		<button type="submit">Submit</button><br>
+		<button type="reset">Reset</button>
 	</form>
 </body>
 </html>
